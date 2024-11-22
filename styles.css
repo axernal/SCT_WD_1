@@ -1,0 +1,115 @@
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #212A31, #2E3944);
+    color: #fff;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background: #124E66;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #212A31;
+    background: #748D92;
+    transform: scale(1.1);
+}
+
+.nav-menu li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-menu li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+section {
+    padding: 100px 20px;
+    margin-top: 80px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+#home {
+    background: linear-gradient(120deg, #124E66, #748D92);
+    color: #ffffff;
+}
+
+#about {
+    background: #ffffff;
+    color: #212A31;
+}
+
+#services {
+    background: #748D92;
+    color: #ffffff;
+}
+
+#contact {
+    background: #2E3944;
+    color: #ffffff;
+}
